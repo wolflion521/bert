@@ -131,3 +131,15 @@ f.logging.info("  %s", output_file)
 ##### 11.1
 * 设置flags和各种参数---> main里面搞一个tokenizer，以后用于切割文本 ---->然后把文本的路径准备好--->切割成tokenizer之后write
 
+## extract_features.py的代码学习
+### 1 参数
+flags    Define_bool/integer/float/string   mark_flags_as_required   tf.app.run()
+### 2 logging
+tf.logging.set_verbosity(tf.logging.INFO)      
+### 3 codecs
+* The codecs module provides stream and file interfaces for transcoding data in your program. It is most commonly used to work with Unicode text, but other encodings are also available for other purposes.
+```
+with codecs.getwriter("utf-8")(tf.gfile.Open(FLAGS.output_file,
+                                               "w")) as writer:
+      writer.write(json.dumps(output_json) + "\n")                                       
+```
