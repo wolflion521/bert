@@ -1,4 +1,5 @@
 #### 1.1 OrderedDict
+https://github.com/wolflion521/bert/blob/acc576f88345638d989de3a1054ba0136013ffa3/create_pretraining_data.py#L132
 https://docs.python.org/zh-cn/3/library/collections.html            
 OrderedDict和namedtuple学习一下使用。           
 OrderedDict比Dict的映射性能低一些，它适合在需要记住插入顺序的场景中使用。           
